@@ -1,6 +1,6 @@
-# Gardens & Heat
+# Tiny Greens
 
-An interactive web map of New York City community gardens, land jurisdiction, and heat vulnerability (NYC Heat Vulnerability Index) across neighborhoods.
+**Gardens & Heat** — an interactive web map of New York City community gardens, land jurisdiction, and heat vulnerability (NYC Heat Vulnerability Index) across neighborhoods.
 
 Built with MapLibre GL JS. Static site — no build step.
 
@@ -8,7 +8,7 @@ Built with MapLibre GL JS. Static site — no build step.
 - Community gardens: archived GreenThumb, July 2026
 - Heat Vulnerability Index: NYC Health, 2020 NTA geography
 - Open space: NYC Planimetric Database
-- Basemap: © OpenStreetMap contributors © CARTO
+- Basemap: Esri World Dark Gray Canvas (© Esri, HERE, Garmin, © OpenStreetMap contributors)
 
 `prepare_data.py` and `prepare_open_space.mjs` generate the files in `data/`.
 

@@ -59,6 +59,7 @@ input {
 }
 
 .finding-label,
+.project-subtitle,
 .method-note,
 .color-legend,
 .card-kicker,
@@ -66,6 +67,14 @@ input {
 .factor-profile,
 .jurisdiction-breakdown p {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.project-subtitle {
+  color: var(--heat);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
 }
 
 h1 {

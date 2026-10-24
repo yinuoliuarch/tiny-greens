@@ -46,16 +46,15 @@ const map = new maplibregl.Map({
     version: 8,
     glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
     sources: {
-      carto: {
+      basemap: {
         type: "raster",
         tiles: [
-          "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-          "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-          "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+          "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
         ],
         tileSize: 256,
+        maxzoom: 16,
         attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          'Basemap &copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       },
     },
     layers: [
@@ -64,7 +63,7 @@ const map = new maplibregl.Map({
         type: "background",
         paint: { "background-color": "#050707" },
       },
-      { id: "basemap", type: "raster", source: "carto" },
+      { id: "basemap", type: "raster", source: "basemap" },
     ],
   },
 });
@@ -694,7 +693,7 @@ async function initializeMap() {
       minzoom: 11.6,
       layout: {
         "text-field": ["get", "hvi_neighborhood"],
-        "text-font": ["Open Sans Regular"],
+        "text-font": ["Open Sans Semibold"],
         "text-size": 10,
         "text-max-width": 9,
       },
